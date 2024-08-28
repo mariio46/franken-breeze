@@ -6,12 +6,12 @@ use Closure;
 use Illuminate\Contracts\View\View;
 use Illuminate\View\Component;
 
-class BaseLayout extends Component
+class AuthLayout extends Component
 {
     /**
      * Create a new component instance.
      */
-    public function __construct(public ?string $title = null)
+    public function __construct()
     {
         //
     }
@@ -21,6 +21,6 @@ class BaseLayout extends Component
      */
     public function render(): View|Closure|string
     {
-        return view('base');
+        return view('layouts.auth');
     }
 }
